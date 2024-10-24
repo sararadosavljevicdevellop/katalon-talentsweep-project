@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Date of birth_mat-mdc-button-touch-target</name>
+   <tag></tag>
+   <elementGuidId>e9d69016-f4d6-435a-88f4-810146505f0c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//span[3]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span.mat-mdc-button-touch-target</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>4a5a4f5a-91b6-44ad-853f-31e8cb51549f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mat-mdc-button-touch-target</value>
+      <webElementGuid>7e89ecaa-487a-4256-b6b4-47b580554ae2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[@class=&quot;mat-typography&quot;]/app-root[1]/div[@class=&quot;padding-top-navigation&quot;]/app-sign-up[@class=&quot;ng-star-inserted&quot;]/app-sign-up-player[@class=&quot;ng-star-inserted&quot;]/div[@class=&quot;sign-up-player-page&quot;]/div[@class=&quot;sign-up-player-container&quot;]/div[@class=&quot;sign-up-player-body&quot;]/div[@class=&quot;sign-up-player-body-item&quot;]/mat-form-field[@class=&quot;mat-mdc-form-field custom-select-style sign-up-player-datepicker ng-tns-c2400808035-1 mat-mdc-form-field-type-mat-input mat-mdc-form-field-has-icon-suffix mat-form-field-appearance-fill mat-primary ng-untouched ng-pristine ng-valid ng-star-inserted&quot;]/div[@class=&quot;mat-mdc-text-field-wrapper mdc-text-field ng-tns-c2400808035-1 mdc-text-field--filled mdc-text-field--no-label&quot;]/div[@class=&quot;mat-mdc-form-field-flex ng-tns-c2400808035-1&quot;]/div[@class=&quot;mat-mdc-form-field-icon-suffix ng-tns-c2400808035-1 ng-star-inserted&quot;]/mat-datepicker-toggle[@class=&quot;mat-datepicker-toggle ng-tns-c2400808035-1&quot;]/button[@class=&quot;mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base cdk-focused cdk-mouse-focused&quot;]/span[@class=&quot;mat-mdc-button-touch-target&quot;]</value>
+      <webElementGuid>0bf292b6-ab83-439b-a223-3f7ddf108381</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span[3]</value>
+      <webElementGuid>8b6d9ec0-cb72-4b3a-8c8e-83b7b78fb4ac</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

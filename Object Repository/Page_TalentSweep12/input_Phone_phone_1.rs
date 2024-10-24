@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_Phone_phone_1</name>
+   <tag></tag>
+   <elementGuidId>33b02181-ad51-47e0-b7cf-8e01372d61fd</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(//input[@id='phone'])[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.sign-up-player-body-item.flex-row.flex-ac.checkbox-item > #phone</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>310f9beb-dbad-4ec0-ac72-478bca840f2e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>checkbox</value>
+      <webElementGuid>77e9268b-8954-4c71-8e9c-57b0e53b91a3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>phone</value>
+      <webElementGuid>68370035-8b0d-4208-9d8d-797bb7525f3b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>ng-untouched ng-pristine ng-valid</value>
+      <webElementGuid>eaacbf4d-e915-4eaa-b093-8306ad16c3d0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[@class=&quot;mat-typography&quot;]/app-root[1]/div[@class=&quot;padding-top-navigation&quot;]/app-sign-up[@class=&quot;ng-star-inserted&quot;]/app-sign-up-player[@class=&quot;ng-star-inserted&quot;]/div[@class=&quot;sign-up-player-page&quot;]/div[@class=&quot;sign-up-player-container&quot;]/div[@class=&quot;sign-up-player-body&quot;]/div[@class=&quot;sign-up-player-body-item flex-row flex-ac checkbox-item&quot;]/input[@id=&quot;phone&quot;]</value>
+      <webElementGuid>96389081-587e-48a8-8ff9-888c77cb5842</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//input[@id='phone'])[2]</value>
+      <webElementGuid>44e45b1d-c5d3-4c7b-b3ff-615d8732b145</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[7]/input</value>
+      <webElementGuid>f17b411f-0386-4f8b-8347-f48c9e33e8c3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//input[@type = 'checkbox' and @id = 'phone']</value>
+      <webElementGuid>5d2cef40-c7ec-403f-8881-330ab964b899</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

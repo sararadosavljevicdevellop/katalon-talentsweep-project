@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Player Sign-up Process</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1cb0db60-ba28-4cb7-8c6b-e13da94c2cf8</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Case 1 - LogIn and Hello Message to Boki</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fbfc4a89-f5b0-4060-a380-7224cede455a</testCaseGuid>
+</TestCaseEntity>

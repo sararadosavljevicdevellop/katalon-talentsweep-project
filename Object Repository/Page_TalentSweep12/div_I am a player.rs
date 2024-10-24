@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_I am a player</name>
+   <tag></tag>
+   <elementGuidId>77550704-569f-4e35-9172-bcb4d43c25b4</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Welcome to TalentSweep'])[1]/following::div[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.sign-up-button</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>a5f11632-8588-431c-8a07-00d6f3fde1cf</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>routerlink</name>
+      <type>Main</type>
+      <value>player</value>
+      <webElementGuid>35c0e29b-e597-426b-a5f9-ba1f5c9d95ac</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>sign-up-button</value>
+      <webElementGuid>6368c465-a1cd-4783-90d3-05915693f339</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tabindex</name>
+      <type>Main</type>
+      <value>0</value>
+      <webElementGuid>c43a6eb4-553d-48a0-80d8-716403c49a62</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>I am a player</value>
+      <webElementGuid>8a504aa9-4990-4ca0-a725-1770dcdef6f5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[@class=&quot;mat-typography&quot;]/app-root[1]/div[@class=&quot;padding-top-navigation&quot;]/app-sign-up[@class=&quot;ng-star-inserted&quot;]/app-sign-up-otpions[@class=&quot;ng-star-inserted&quot;]/div[@class=&quot;sign-up-page&quot;]/div[@class=&quot;sign-up-container&quot;]/div[@class=&quot;sign-up-body&quot;]/div[@class=&quot;sign-up-button&quot;]</value>
+      <webElementGuid>a8646035-02a7-458f-9519-51fc95ae3bc3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Welcome to TalentSweep'])[1]/following::div[2]</value>
+      <webElementGuid>038c54f2-0e38-4fba-be6d-108326138df5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='TS'])[1]/following::div[8]</value>
+      <webElementGuid>4c0a07a3-cd95-459b-b724-7680dde3fd32</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='I am a staff member'])[1]/preceding::div[1]</value>
+      <webElementGuid>e3302b78-4075-46e5-91a1-d14dcfd81a0e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='I want to register a club'])[1]/preceding::div[2]</value>
+      <webElementGuid>802f7da6-e157-4ef1-a46b-917d05b9a78e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='I am a player']/parent::*</value>
+      <webElementGuid>a562a6ba-c89d-4f5d-bfb8-2f3ffd041a94</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//app-sign-up-otpions/div/div/div[2]/div</value>
+      <webElementGuid>0cd360e0-a9ea-4f81-b6dd-4898e79cfe01</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'I am a player' or . = 'I am a player')]</value>
+      <webElementGuid>0051039b-9037-4d4f-a74a-27236e56e835</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
