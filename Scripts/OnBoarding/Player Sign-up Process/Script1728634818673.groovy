@@ -17,30 +17,41 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.testobject.ConditionType
-import com.kms.katalon.core.webui.common.WebUiCommonHelper
-import java.io.File
-import java.io.FileOutputStream
-import java.io.FileReader
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import java.io.File as File
+import java.io.FileOutputStream as FileOutputStream
+import java.io.FileReader as FileReader
 
 int emailCounter
+
 int squadCounter
 
-String emailCounterPath = "emailCounter.txt"
-String squadCounterPath = "squadCounter.txt"
+String emailCounterPath = 'emailCounter.txt'
 
+String squadCounterPath = 'squadCounter.txt'
 
 def emailFile = new File(emailCounterPath)
+
 def squadFile = new File(squadCounterPath)
 
-if(emailFile.exists() && squadFile.exists()) {
-	emailCounter = emailFile.text.toInteger()
-	squadCounter = squadFile.text.toInteger()
+if (emailFile.exists() && squadFile.exists()) {
+    emailCounter = emailFile.text.toInteger()
+
+    squadCounter = squadFile.text.toInteger()
+} else {
+    checkFileExists(emailCounterPath)
+
+    checkFileExists(squadCounterPath)
 }
 
+// Metoda za proveru da li fajl postoji
+// Proverite da li fajl postoji
+// Opcionalno: Kreirajte fajl ako ne postoji
+squadCounter++
 
-squadCounter ++
 emailFile.write(emailCounter.toString())
+
 squadFile.write(squadCounter.toString())
 
 String baseEmail = ('radosavljevic.sara+' + emailCounter) + '@gmail.com'
@@ -65,7 +76,7 @@ def jsonResponse = new JsonSlurper().parseText(response.getResponseText())
 
 println('jsonResponse: ' + jsonResponse)
 
-def player = jsonResponse.squad[0]
+def player = jsonResponse.squad[squadCounter]
 
 String playerFullName = player.name
 
@@ -96,6 +107,8 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://devportal.talentsweep.com/login')
 
+WebUI.waitForElementPresent(findTestObject('Page_TalentSweep12/span_Signup'), 0)
+
 WebUI.click(findTestObject('Object Repository/Page_TalentSweep12/span_Signup'))
 
 WebUI.click(findTestObject('Object Repository/Page_TalentSweep12/div_I am a player'))
@@ -119,56 +132,60 @@ def monthMap = [('01') : 'JAN', ('02') : 'FEB', ('03') : 'MAR', ('04') : 'APR', 
 WebUI.executeJavaScript('arguments[0].click();', Arrays.asList(WebUI.findWebElement(findTestObject('Object Repository/Page_TalentSweep12/span_OCT 2024_mat-mdc-button-touch-target'))))
 
 // Definišite strelicu za menjanje godina koristeći roditeljski element ili poziciju
-TestObject prevYearArrow = new TestObject().addProperty("xpath", ConditionType.EQUALS, "//button[contains(@class,'mat-mdc-button')]//span[@class='mat-mdc-button-touch-target']")
-
-
+TestObject prevYearArrow = new TestObject().addProperty('xpath', ConditionType.EQUALS, '//button[contains(@class,\'mat-mdc-button\')]//span[@class=\'mat-mdc-button-touch-target\']')
 
 // Kreiraj novi TestObject sa dinamičkim XPath-om
-TestObject dynamicYear = new TestObject().addProperty("xpath", ConditionType.EQUALS, "//span[contains(text(),'" + year + "')]")
+TestObject dynamicYear = new TestObject().addProperty('xpath', ConditionType.EQUALS, ('//span[contains(text(),\'' + year) + 
+    '\')]')
 
 TestObject perviousButton = findTestObject('Object Repository/Page_TalentSweep12/button_Create account_mat-calendar-previous_cd2f86')
 
 TestObject previousYearsButton = findTestObject('Object Repository/btn_Previous_24_Years')
 
 boolean yearFound = false
+
 int maxAttempts = 20
+
 int attempts = 0
 
-while (!yearFound && attempts < maxAttempts) {
-	// Proveri da li je godina vidljiva
-	if(WebUI.verifyElementPresent(dynamicYear, 10, FailureHandling.OPTIONAL)) {
-		yearFound = true
-		WebUI.delay(1)
-		WebUI.executeJavaScript("arguments[0].click();", Arrays.asList(WebUiCommonHelper.findWebElement(dynamicYear, 10)))
-	} else {
-		if (WebUI.verifyElementPresent(findTestObject('Object Repository/btn_Previous_24_Years'), 10)) {
-			WebUI.click(findTestObject('Object Repository/btn_Previous_24_Years'))
-		} else {
-			WebUI.comment('Dugme za prethodnih 24 godine nije pronađeno')
-		}
-	}
-		
+while (!(yearFound) && (attempts < maxAttempts)) {
+    // Proveri da li je godina vidljiva
+    if (WebUI.verifyElementPresent(dynamicYear, 10, FailureHandling.OPTIONAL)) {
+        yearFound = true
+
+        WebUI.delay(1)
+
+        WebUI.executeJavaScript('arguments[0].click();', Arrays.asList(WebUiCommonHelper.findWebElement(dynamicYear, 10)))
+    } else {
+        if (WebUI.verifyElementPresent(findTestObject('Object Repository/btn_Previous_24_Years'), 10)) {
+            WebUI.click(findTestObject('Object Repository/btn_Previous_24_Years'))
+        } else {
+            WebUI.comment('Dugme za prethodnih 24 godine nije pronađeno')
+        }
+    }
 }
 
 println('Mesec ' + month)
-println('Mesec mapa ' + monthMap[month])
 
-WebUI.comment("Mesec: " + month)
-WebUI.comment("Mapirani mesec: " + monthMap[month])
+println('Mesec mapa ' + (monthMap[month]))
 
-TestObject dynamicMonth = new TestObject().addProperty("xpath", ConditionType.EQUALS, "//button[span[text() = ' ${monthMap[month]} ']]")
-	
-WebUI.comment("Generisani XPath: //button[@aria-label='${monthMap[month]} ${year}']")
-	
+WebUI.comment('Mesec: ' + month)
+
+WebUI.comment('Mapirani mesec: ' + (monthMap[month]))
+
+TestObject dynamicMonth = new TestObject().addProperty('xpath', ConditionType.EQUALS, "//button[span[text() = ' ${monthMap[month]} ']]")
+
+WebUI.comment("Generisani XPath: //button[@aria-label='$dynamicMonth $year']")
+
 // Verifikacija i klik
 if (WebUI.verifyElementPresent(dynamicMonth, 10)) {
-	WebUI.click(dynamicMonth) // Pokušaj da klikneš
+    WebUI.click(dynamicMonth // Pokušaj da klikneš
+        )
 } else {
-	WebUI.comment("Mesec nije pronađen: " + monthMap[month] + " " + year)
+    WebUI.comment((('Mesec nije pronađen: ' + (monthMap[month])) + ' ') + year)
 }
 
-
-TestObject dynamicDay = new TestObject().addProperty("xpath", ConditionType.EQUALS, "//button[span[text() = ' ${day} ']]")
+TestObject dynamicDay = new TestObject().addProperty('xpath', ConditionType.EQUALS, "//button[span[text() = ' $day ']]")
 
 WebUI.click(dynamicDay)
 
@@ -177,7 +194,6 @@ WebUI.setText(findTestObject('Object Repository/Page_TalentSweep12/input_Email_e
 WebUI.setText(findTestObject('Object Repository/Page_TalentSweep12/input_Phone_phone'), '1728257927')
 
 WebUI.click(findTestObject('Object Repository/Page_TalentSweep12/div_Create account'))
-
 
 // Ispisi status koda odgovora
 println('Status Code: ' + response.getStatusCode())
@@ -195,10 +211,37 @@ println('jsonResponse: ' + jsonResponse)
 boolean isTextPresent = WebUI.verifyTextPresent('GOOOOAL!', false)
 
 if (isTextPresent) {
-	println('Element je prisutan na stranici.')
+    println('Element je prisutan na stranici.')
 } else {
-	println('Element nije pronađen na stranici.')
+    println('Element nije pronađen na stranici.')
 }
 
-emailCounter ++
+emailCounter++
+
 emailFile.write(emailCounter.toString())
+
+static void checkFileExists(String fileName) {
+    String path = fileName
+
+    File file = new File(path)
+
+    if (file.exists()) {
+        System.out.println('Fajl već postoji: ' + file.getName())
+    } else {
+        System.out.println('Fajl ne postoji: ' + file.getName())
+
+        try {
+            if (file.createNewFile()) {
+                System.out.println('Fajl je uspešno kreiran: ' + file.getName())
+            } else {
+                System.out.println('Fajl nije moguće kreirati.')
+            }
+        }
+        catch (IOException e) {
+            System.out.println('Dogodila se greška.')
+
+            e.printStackTrace()
+        } 
+    }
+}
+
